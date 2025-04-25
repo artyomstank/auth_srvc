@@ -7,7 +7,7 @@ syntax = "proto3";
 package sso;
 
 // Настройки для генерации Go кода.
-option go_package = "gen/go/sso";
+option go_package = "protos/gen/go/sso";
 
 
 // Auth is service for managing permissions and roles.
