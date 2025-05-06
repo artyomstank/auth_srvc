@@ -1,3 +1,3 @@
-module github.com/artyomstank/auth_srvc
+module D:\projects\1_trial\sso
 
 go 1.23.4
