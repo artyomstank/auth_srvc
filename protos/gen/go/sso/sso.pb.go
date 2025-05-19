@@ -340,7 +340,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\bis_admin\x18\x01 \x01(\bR\aisAdmin2s\n" +
 	"\x04Auth\x129\n" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
-	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB;Z9github.com/artyomstank/auth_srvc/protos/gen/go/sso; ssov1b\x06proto3"
+	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB\x1cZ\x1a./protos/gen/go/sso; ssov1b\x06proto3"
 
 var (
 	file_sso_sso_proto_rawDescOnce sync.Once
