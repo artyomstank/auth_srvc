@@ -10,7 +10,7 @@
 
 // Текущий пакет - указывает пространство имен для сервиса и сообщений. Помогает избегать конфликтов имен.
 
-package sso
+package ssov1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -80,7 +80,7 @@ func (x *RegisterRequest) GetPassword() string {
 	return ""
 }
 
-// Объект, который метод (ручка) вернёт.
+// Объект, котрый метод (ручка) вернет.
 type RegisterResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserId        int64                  `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"` // User ID of the registered user.
@@ -234,7 +234,7 @@ var File_sso_sso_proto protoreflect.FileDescriptor
 
 const file_sso_sso_proto_rawDesc = "" +
 	"\n" +
-	"\rsso/sso.proto\x12\x03sso\"C\n" +
+	"\rsso/sso.proto\x12\x04auth\"C\n" +
 	"\x0fRegisterRequest\x12\x14\n" +
 	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\"+\n" +
@@ -245,11 +245,10 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12\x15\n" +
 	"\x06app_id\x18\x03 \x01(\x05R\x05appId\"%\n" +
 	"\rLoginResponse\x12\x14\n" +
-	"\x05token\x18\x01 \x01(\tR\x05token2o\n" +
-	"\x04Auth\x127\n" +
-	"\bRegister\x12\x14.sso.RegisterRequest\x1a\x15.sso.RegisterResponse\x12.\n" +
-	"\x05Login\x12\x11.sso.LoginRequest\x1a\x12.sso.LoginResponseB\fZ\n" +
-	"gen/go/ssob\x06proto3"
+	"\x05token\x18\x01 \x01(\tR\x05token2s\n" +
+	"\x04Auth\x129\n" +
+	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
+	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB;Z9github.com/artyomstank/auth_srvc/protos/gen/go/sso; ssov1b\x06proto3"
 
 var (
 	file_sso_sso_proto_rawDescOnce sync.Once
@@ -265,16 +264,16 @@ func file_sso_sso_proto_rawDescGZIP() []byte {
 
 var file_sso_sso_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_sso_sso_proto_goTypes = []any{
-	(*RegisterRequest)(nil),  // 0: sso.RegisterRequest
-	(*RegisterResponse)(nil), // 1: sso.RegisterResponse
-	(*LoginRequest)(nil),     // 2: sso.LoginRequest
-	(*LoginResponse)(nil),    // 3: sso.LoginResponse
+	(*RegisterRequest)(nil),  // 0: auth.RegisterRequest
+	(*RegisterResponse)(nil), // 1: auth.RegisterResponse
+	(*LoginRequest)(nil),     // 2: auth.LoginRequest
+	(*LoginResponse)(nil),    // 3: auth.LoginResponse
 }
 var file_sso_sso_proto_depIdxs = []int32{
-	0, // 0: sso.Auth.Register:input_type -> sso.RegisterRequest
-	2, // 1: sso.Auth.Login:input_type -> sso.LoginRequest
-	1, // 2: sso.Auth.Register:output_type -> sso.RegisterResponse
-	3, // 3: sso.Auth.Login:output_type -> sso.LoginResponse
+	0, // 0: auth.Auth.Register:input_type -> auth.RegisterRequest
+	2, // 1: auth.Auth.Login:input_type -> auth.LoginRequest
+	1, // 2: auth.Auth.Register:output_type -> auth.RegisterResponse
+	3, // 3: auth.Auth.Login:output_type -> auth.LoginResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
